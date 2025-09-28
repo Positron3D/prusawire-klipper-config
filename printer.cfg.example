@@ -66,6 +66,9 @@ enable_force_move: True
 ##### SuperPINDA on BTT SB2209 USB
 #[include prusawire/probes/super_pinda__btt_sb2209_usb.cfg]
 
+##### SuperPINDA on BTT SB2209 CAN
+#[include prusawire/probes/super_pinda__btt_sb2209_can.cfg]
+
 ##### E3D PZ Probe on BTT SB2209 USB
 #[include prusawire/probes/e3d_pz_probe__btt_sb2209_usb.cfg]
 
