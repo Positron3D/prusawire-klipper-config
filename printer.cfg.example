@@ -29,6 +29,12 @@ enable_force_move: True
 #[mcu]
 # serial: /dev/serial/by-id/usb-Klipper_stm32_xxxxxxx
 
+##### BTT SKR Pico
+#[include prusawire/mainboards/btt_skr_pico.cfg]
+#
+#[mcu]
+# serial: /dev/serial/by-id/usb-Klipper_stm32_xxxxxxx
+
 #########################
 #### TOOLHEAD BOARDS
 
