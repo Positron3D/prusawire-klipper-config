@@ -82,6 +82,21 @@ enable_force_move: True
 #[include prusawire/probes/omron__btt_sb2209_usb.cfg]
 
 #########################
+#### EXTRUDERS
+
+##### Clockwork 2
+#[include prusawire/extruders/clockwork_2.cfg]
+
+##### Galileo 2
+#[include prusawire/extruders/galileo_2.cfg]
+
+#########################
+#### HOTENDS
+
+##### E3D V6, E3D Revo
+#[include prusawire/hotends/e3d_v6_revo.cfg]
+
+#########################
 #### FILAMENT SENSOR
 
 ##### LDO Nitehawk SB
@@ -132,16 +147,6 @@ damping_ratio_y: 0.053
 
 [extruder]
 nozzle_diameter: 0.4
-min_temp: 0
-max_temp: 310
-sensor_type: ATC Semitec 104NT-4-R025H42G # E3D Revo, Prusa E3D V6
-microsteps: 32
-full_steps_per_rotation: 200 # 200 for 1.8 degree, 400 for 0.9 degree
-rotation_distance: 22.6789511
-gear_ratio: 50:10 # Stealthburner CW2
-min_extrude_temp: 170
-max_extrude_only_distance: 150
-max_extrude_cross_section: 2
 
 #*# <---------------------- SAVE_CONFIG ---------------------->
 #*# DO NOT EDIT THIS BLOCK OR BELOW. The contents are auto-generated.
