@@ -83,4 +83,4 @@ Shake Tune allows you to visualize the harmonics of your machine and to quickly 
 ### Klipper Shake&Tune plugin
 [USB External Mount](https://github.com/DrumClock/mount_copy/tree/main) by @DrumClock
 
-Install to allow external USB per @MattChu, who's progress can be tracked at: [Dont Click Me] (https://projectshametracker.page/)
+Install to allow external USB per @MattChu, who's progress can be tracked at: [Dont Click Me](https://projectshametracker.page/)
