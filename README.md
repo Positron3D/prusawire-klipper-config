@@ -74,3 +74,8 @@ TMC Autotune is a Klipper extension for automaticly configuring and tuning TMC d
 [KAMP](https://github.com/kyleisah/Klipper-Adaptive-Meshing-Purging) by @kyleisah
 
 KAMP or Klipper Adaptive Meshing and Purging is an add-in that allows for addaptive meshes and purges that are near the mesh. While mainline Klipper has already added the adaptive mesh aspect, the adaptive purge placement is useful.
+
+### Klipper Shake&Tune plugin
+[Klipper Shake&Tune plugin](https://github.com/Frix-x/klippain-shaketune/tree/main) by @Frix-x
+
+Shake Tune allows you to visualize the harmonics of your machine and to quickly troubleshoot mechanical issues.
