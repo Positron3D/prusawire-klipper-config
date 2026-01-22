@@ -79,3 +79,8 @@ KAMP or Klipper Adaptive Meshing and Purging is an add-in that allows for addapt
 [Klipper Shake&Tune plugin](https://github.com/Frix-x/klippain-shaketune/tree/main) by @Frix-x
 
 Shake Tune allows you to visualize the harmonics of your machine and to quickly troubleshoot mechanical issues.
+
+### Klipper Shake&Tune plugin
+[USB External Mount](https://github.com/DrumClock/mount_copy/tree/main) by @DrumClock
+
+Install to allow external USB per @MattChu, who's progress can be tracked at: [Dont Click Me] (https://projectshametracker.page/)
