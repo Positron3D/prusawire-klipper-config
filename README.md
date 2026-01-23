@@ -65,8 +65,6 @@ To install Klipper Screen, follow [this guide](https://klipperscreen.readthedocs
 
 Some defaults have been provided, but they are no doubt unsuitable for your exact machine. We recommend installing [ShakeTune](https://github.com/Frix-x/klippain-shaketune) for measuring resonances, and reading the [Klipper guide](https://www.klipper3d.org/Measuring_Resonances.html#max-smoothing) on understanding which value to choose.
 
-In addition, 
-
 ### Y Axis Input Shaping
 
 This requires an external accelerometer (eg LDO Input Shaper) to be mounted to your heated bed.
