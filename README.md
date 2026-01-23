@@ -36,6 +36,8 @@ managed_services: klipper
 
 - Refer to the `printer.cfg.example` file on setting up your printer.cfg for the first time
 
+- Set the rotation_distance within the printer.cfg based on the pulley size
+
 - Run PID calibration on your hotend:
 ```shell
 PID_CALIBRATE heater=extruder TARGET=250
