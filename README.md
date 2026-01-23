@@ -55,6 +55,12 @@ If you are running the Einsy board, congrats, you are now done.
 For the BTT SKR Mini E3, some further tuning likely needs to happen. Refer to [this guide](https://gist.github.com/clee/9108f7717defce8b1222698f816def0a#finding-the-right-stallguard-threshold) by clee
 on setting the correct stallguard threshold.
 
+## Klipper Screen
+
+For users that are using a TFT or HDMI screen, you will need to install Klipper Screeen [Link](https://klipperscreen.readthedocs.io/en/latest/) 
+
+To install Klipper Screen, follow [this guide](https://klipperscreen.readthedocs.io/en/latest/Installation/)
+
 ## Input Shaper
 
 Some defaults have been provided, but they are no doubt unsuitable for your exact machine. We recommend installing [ShakeTune](https://github.com/Frix-x/klippain-shaketune) for measuring resonances, and reading the [Klipper guide](https://www.klipper3d.org/Measuring_Resonances.html#max-smoothing) on understanding which value to choose.
