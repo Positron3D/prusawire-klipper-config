@@ -147,18 +147,17 @@ max_extrude_cross_section: 2
 #### Rotation Distance
 
 # If you are using stock MK3/MK4 timing pulleys (16 teeth) for 
-#your belts, you need to change rotation_distance to 32. 
+# your belts, uncomment the following to change rotation_distance to 32.
+# This must be kept after the mainboards section, which set a rotation_idstance of 40 (20 teeth).
 
-#If you are using 20 tooth timing pulleys, change rotation_distance to 40.
+#[stepper_x]
+#rotation_distance: 32
 
-[stepper_x]
-rotation_distance: 0
+#[stepper_y]
+#rotation_distance: 32
 
-[stepper_y]
-rotation_distance: 0
-
-[stepper_z]
-rotation_distance: 0
+#[stepper_z]
+#rotation_distance: 32
 
 #*# <---------------------- SAVE_CONFIG ---------------------->
 #*# DO NOT EDIT THIS BLOCK OR BELOW. The contents are auto-generated.
