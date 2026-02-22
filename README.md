@@ -36,6 +36,8 @@ managed_services: klipper
 
 - Refer to the `printer.cfg.example` file on setting up your printer.cfg for the first time
 
+- Set the rotation_distance within the printer.cfg based on the pulley size
+
 - Run PID calibration on your hotend:
 ```shell
 PID_CALIBRATE heater=extruder TARGET=250
@@ -53,11 +55,15 @@ If you are running the Einsy board, congrats, you are now done.
 For the BTT SKR Mini E3, some further tuning likely needs to happen. Refer to [this guide](https://gist.github.com/clee/9108f7717defce8b1222698f816def0a#finding-the-right-stallguard-threshold) by clee
 on setting the correct stallguard threshold.
 
+## Klipper Screen
+
+For users that are using a TFT or HDMI screen, you will need to install Klipper Screeen [Link](https://klipperscreen.readthedocs.io/en/latest/) 
+
+To install Klipper Screen, follow [this guide](https://klipperscreen.readthedocs.io/en/latest/Installation/)
+
 ## Input Shaper
 
 Some defaults have been provided, but they are no doubt unsuitable for your exact machine. We recommend installing [ShakeTune](https://github.com/Frix-x/klippain-shaketune) for measuring resonances, and reading the [Klipper guide](https://www.klipper3d.org/Measuring_Resonances.html#max-smoothing) on understanding which value to choose.
-
-In addition, 
 
 ### Y Axis Input Shaping
 
@@ -74,3 +80,13 @@ TMC Autotune is a Klipper extension for automaticly configuring and tuning TMC d
 [KAMP](https://github.com/kyleisah/Klipper-Adaptive-Meshing-Purging) by @kyleisah
 
 KAMP or Klipper Adaptive Meshing and Purging is an add-in that allows for addaptive meshes and purges that are near the mesh. While mainline Klipper has already added the adaptive mesh aspect, the adaptive purge placement is useful.
+
+### Klipper Shake&Tune plugin
+[Klipper Shake&Tune plugin](https://github.com/Frix-x/klippain-shaketune/tree/main) by @Frix-x
+
+Shake Tune allows you to visualize the harmonics of your machine and to quickly troubleshoot mechanical issues.
+
+### External USB Mounting
+[USB External Mount](https://github.com/DrumClock/mount_copy/tree/main) by @DrumClock
+
+Install to allow external USB per @MattChu, who's progress can be tracked at: [Dont Click Me](https://projectshametracker.page/)
