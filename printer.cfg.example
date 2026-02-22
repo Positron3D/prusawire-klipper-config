@@ -90,6 +90,13 @@ enable_force_move: True
 ##### Galileo 2
 #[include prusawire/extruders/galileo_2.cfg]
 
+[extruder]
+# The extruders have default rotation_distance values, but it should
+# be calibrated. See the included configuration files for start values.
+# Guide: https://ellis3dp.com/Print-Tuning-Guide/articles/extruder_calibration.html
+#rotation_distance: 0
+nozzle_diameter: 0.4
+
 #########################
 #### HOTENDS
 
@@ -144,9 +151,6 @@ damping_ratio_x: 0.037
 shaper_freq_y: 69.8
 shaper_type_y: 3hump_ei
 damping_ratio_y: 0.053
-
-[extruder]
-nozzle_diameter: 0.4
 
 #########################
 #### Rotation Distance
