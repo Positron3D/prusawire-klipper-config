@@ -112,8 +112,6 @@ nozzle_diameter: 0.4
 ##### BTT SB2209 USB
 #[include prusawire/filament_sensors/btt_sb2209_usb.cfg]
 
-# For BTT Pi TFT and HDMI 5, please check back soon
-
 #########################
 #### LCD SCREENS
 
