@@ -137,7 +137,7 @@ nozzle_diameter: 0.4
 [printer]
 kinematics: corexz
 max_velocity: 300
-max_accel: 4000
+max_accel: 2000
 max_z_velocity: 300
 max_z_accel: 2000
 square_corner_velocity: 12.0
