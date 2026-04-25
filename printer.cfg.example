@@ -39,10 +39,13 @@ enable_force_move: True
 #### TOOLHEAD BOARDS
 
 ##### LDO Nitehawk SB
+# There are 2 versions of the Nitehawk. Only uncomment the one for your version.
+# The MCU serial will include rp2040 on the original and stm32 on the V2.
 #[include prusawire/toolboards/ldo_nitehawk_sb.cfg]
+#[include prusawire/toolboards/ldo_nitehawk_sb_v2.cfg]
 #
 #[mcu nitehawk]
-#serial: /dev/serial/by-id/usb-Klipper_rp2040_xxxxxxx
+#serial: /dev/serial/by-id/usb-Klipper_xxxxxx_xxxxxxx
 
 ##### BTT SB2209 USB
 #[include prusawire/toolboards/btt_sb2209_usb.cfg]
@@ -60,14 +63,23 @@ enable_force_move: True
 #########################
 #### PROBES
 
-##### SuperPINDA on LDO Nitehawk SB
+##### SuperPINDA on LDO Nitehawk SB V1
 #[include prusawire/probes/super_pinda__ldo_nitehawk_sb.cfg]
 
-##### E3D PZ Probe on LDO Nitehawk SB
+##### E3D PZ Probe on LDO Nitehawk SB V1
 #[include prusawire/probes/e3d_pz_probe__ldo_nitehawk_sb.cfg]
 
-##### Omron Probe on LDO Nitehawk SB
+##### Omron Probe on LDO Nitehawk SB V1
 #[include prusawire/probes/omron__ldo_nitehawk_sb.cfg]
+
+##### SuperPINDA on LDO Nitehawk SB V2
+#[include prusawire/probes/super_pinda__ldo_nitehawk_sb_v2.cfg]
+
+##### E3D PZ Probe on LDO Nitehawk SB V2
+#[include prusawire/probes/e3d_pz_probe__ldo_nitehawk_sb_v2.cfg]
+
+##### Omron Probe on LDO Nitehawk SB V2
+#[include prusawire/probes/omron__ldo_nitehawk_sb_v2.cfg]
 
 ##### SuperPINDA on BTT SB2209 USB
 #[include prusawire/probes/super_pinda__btt_sb2209_usb.cfg]
@@ -106,8 +118,11 @@ nozzle_diameter: 0.4
 #########################
 #### FILAMENT SENSOR
 
-##### LDO Nitehawk SB
+##### LDO Nitehawk SB V1
 #[include prusawire/filament_sensors/ldo_nitehawk_sb.cfg]
+
+##### LDO Nitehawk SB V2
+#[include prusawire/filament_sensors/ldo_nitehawk_sb_v2.cfg]
 
 ##### BTT SB2209 USB
 #[include prusawire/filament_sensors/btt_sb2209_usb.cfg]
@@ -137,7 +152,7 @@ nozzle_diameter: 0.4
 [printer]
 kinematics: corexz
 max_velocity: 300
-max_accel: 4000
+max_accel: 2000
 max_z_velocity: 300
 max_z_accel: 2000
 square_corner_velocity: 12.0
