@@ -4,7 +4,8 @@
 [force_move]
 enable_force_move: True
 
-[include prusawire/mainsail.cfg]
+[include mainsail.cfg]
+#[include fluidd.cfg] # If using Fluidd, uncomment this line and comment the mailsail.cfg line.
 
 #[mcu rpi]
 #serial: /tmp/klipper_host_mcu
