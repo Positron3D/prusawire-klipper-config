@@ -71,17 +71,19 @@ This requires an external accelerometer (eg LDO Input Shaper) to be mounted to y
 
 ## Using Pi As MCU
 
-If you encounter a klipper error for mcu 'rpi': Unable to connect, follow the [Flashing RPI guide](https://www.klipper3d.org/RPi_microcontroller.html)
+If you encounter a Klipper error for mcu 'rpi': Unable to connect, follow the [Flashing RPI guide](https://www.klipper3d.org/RPi_microcontroller.html)
 
 ## Additional Useful Add-ins
+
+### Squiggly Purge
+[Squiggly Purge](https://github.com/mjonuschat/voron-mods/tree/main/Squiggly%20Purge) by @mjonuschat
+
+For making fun shaped purges
 
 ### TMC Auto Tune
 [TMC Autotune](https://github.com/andrewmcgr/klipper_tmc_autotune) by @andrewmcgr
 
 TMC Autotune is a Klipper extension for automaticly configuring and tuning TMC drivers. To fully use TMC Autotune, you will need to know the motor constants on each motor. For common motors, review the [motor_database.cfg](https://github.com/andrewmcgr/klipper_tmc_autotune/blob/main/motor_database.cfg) and search for the motor you have. If your motor does not show up on that list you will need to find the data sheet and create a custom motor as seen in [User-Defined Motors](https://github.com/andrewmcgr/klipper_tmc_autotune?tab=readme-ov-file#user-defined-motors).
-
-### Squiggly Purge
-[Squiggly Purge](https://github.com/mjonuschat/voron-mods/tree/main/Squiggly%20Purge) by @mjonuschat
 
 ### Klipper Shake&Tune plugin
 [Klipper Shake&Tune plugin](https://github.com/Frix-x/klippain-shaketune/tree/main) by @Frix-x
