@@ -69,6 +69,10 @@ Some defaults have been provided, but they are no doubt unsuitable for your exac
 
 This requires an external accelerometer (eg LDO Input Shaper) to be mounted to your heated bed.
 
+## Using Pi As MCU
+
+If you encounter a klipper error for mcu 'rpi': Unable to connect, follow the [Flashing RPI guide](https://www.klipper3d.org/RPi_microcontroller.html)
+
 ## Additional Useful Add-ins
 
 ### TMC Auto Tune
@@ -76,10 +80,8 @@ This requires an external accelerometer (eg LDO Input Shaper) to be mounted to y
 
 TMC Autotune is a Klipper extension for automaticly configuring and tuning TMC drivers. To fully use TMC Autotune, you will need to know the motor constants on each motor. For common motors, review the [motor_database.cfg](https://github.com/andrewmcgr/klipper_tmc_autotune/blob/main/motor_database.cfg) and search for the motor you have. If your motor does not show up on that list you will need to find the data sheet and create a custom motor as seen in [User-Defined Motors](https://github.com/andrewmcgr/klipper_tmc_autotune?tab=readme-ov-file#user-defined-motors).
 
-### KAMP
-[KAMP](https://github.com/kyleisah/Klipper-Adaptive-Meshing-Purging) by @kyleisah
-
-KAMP or Klipper Adaptive Meshing and Purging is an add-in that allows for addaptive meshes and purges that are near the mesh. While mainline Klipper has already added the adaptive mesh aspect, the adaptive purge placement is useful.
+### Squiggly Purge
+[Squiggly Purge](https://github.com/mjonuschat/voron-mods/tree/main/Squiggly%20Purge) by @mjonuschat
 
 ### Klipper Shake&Tune plugin
 [Klipper Shake&Tune plugin](https://github.com/Frix-x/klippain-shaketune/tree/main) by @Frix-x
