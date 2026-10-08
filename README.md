@@ -52,6 +52,12 @@ PID_CALIBRATE heater=extruder TARGET=250
 PID_CALIBRATE heater=heater_bed TARGET=110
 ```
 
+## Toolboard Wiring Notes
+
+### LDO Nitehawk-SB
+
+If the board drops off USB after every FIRMWARE_RESTART and needs a power cycle, it has the V1.5 USB adapter board. Remove R6 and R7 as described in the [Prusawire FAQ](https://prusawire.positron3d.com/faq).
+
 ## Sensorless Homing
 
 If you are running the Einsy board, congrats, you are now done.
