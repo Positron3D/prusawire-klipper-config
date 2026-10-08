@@ -94,6 +94,9 @@ enable_force_move: True
 ##### Omron Probe on BTT SB2209 USB
 #[include prusawire/probes/omron__btt_sb2209_usb.cfg]
 
+##### SuperPINDA wired to the Einsy RAMBo's stock PINDA connector
+#[include prusawire/probes/super_pinda__einsy_rambo.cfg]
+
 #########################
 #### EXTRUDERS
 
@@ -154,8 +157,8 @@ nozzle_diameter: 0.4
 kinematics: corexz
 max_velocity: 300
 max_accel: 2000
-max_z_velocity: 300
-max_z_accel: 2000
+max_z_velocity: 100
+max_z_accel: 1000
 square_corner_velocity: 12.0
 
 [input_shaper]
@@ -165,6 +168,37 @@ damping_ratio_x: 0.037
 shaper_freq_y: 69.8
 shaper_type_y: 3hump_ei
 damping_ratio_y: 0.053
+
+#########################
+#### MOTORS
+
+# The mainboard files ship one run_current. run_current and driver_SGTHRS are tuned
+# as a pair: after changing run_current, re-tune the StallGuard threshold (README,
+# Sensorless Homing). On the Einsy RAMBo the driver sections are [tmc2130 ...]
+# instead of [tmc2209 ...].
+
+##### LDO 42STH40-1684AC Switchwire kit motors (BOM option A, 20T pulleys) or
+##### Prusa MK3 donor motors (1.0 A rated, 16T pulleys)
+# 0.5 A is Voron's Switchwire reference value for the kit motors and a safe value for
+# the MK3 motors, which should stay at or below 0.6 A. MK3 donors also uncomment the
+# 16T rotation_distance block below.
+#[tmc2209 stepper_x]
+#run_current: 0.5
+#[tmc2209 stepper_y]
+#run_current: 0.5
+#[tmc2209 stepper_z]
+#run_current: 0.5
+
+##### Prusa MK4S donor motors (0.9 degree, 16T pulleys)
+# Also uncomment the 16T rotation_distance block below, and set run_current to suit
+# the rating on the motor label. Without the lines below every axis moves half the
+# commanded distance.
+#[stepper_x]
+#full_steps_per_rotation: 400
+#[stepper_y]
+#full_steps_per_rotation: 400
+#[stepper_z]
+#full_steps_per_rotation: 400
 
 #########################
 #### Rotation Distance
