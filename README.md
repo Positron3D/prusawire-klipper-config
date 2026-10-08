@@ -9,6 +9,8 @@ We do not recommend using KIAUH, as this tends to be over-zealous with how it co
 
 This config requires Klipper from 2025-04-06 or later. The homing macros use the `SET_HOMED` parameter of `SET_KINEMATIC_POSITION`, which older builds silently ignore. Check the Klipper version on Mainsail's Machine page and update Klipper from there if it is older.
 
+This config requires a toolhead board: LDO Nitehawk-SB V1 or V2, or BTT SB2209 USB or CAN. The extruder, hotend, fans and probe are all wired to it. A stock-wired MK3 with the extruder on the mainboard is not supported.
+
 For installing MainsailOS (and with that, Klipper) for the first time, please refer to their [installation guide](https://docs-os.mainsail.xyz/getting-started/raspberry-pi-os-based).
 
 ### Upgrading the Einsy Rambo to Klipper - Read this!
