@@ -52,6 +52,20 @@ PID_CALIBRATE heater=extruder TARGET=250
 PID_CALIBRATE heater=heater_bed TARGET=110
 ```
 
+## Slicer Setup
+
+Start G-code (PrusaSlicer, OrcaSlicer):
+```
+PRINT_START BED=[first_layer_bed_temperature] EXTRUDER=[first_layer_temperature]
+```
+
+End G-code:
+```
+PRINT_END
+```
+
+Enable object labels so adaptive meshing and purging know where the print is. PrusaSlicer: Print Settings > Output options > Label objects: Firmware-specific. OrcaSlicer: Others > Exclude objects.
+
 ## Toolboard Wiring Notes
 
 The two BTT SB2209 configs are derived from BTT's documentation and schematics and have not yet been run on a printer. If you build one, please report how it went on the Positron 3D Discord.
