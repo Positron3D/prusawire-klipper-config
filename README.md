@@ -52,6 +52,12 @@ PID_CALIBRATE heater=extruder TARGET=250
 PID_CALIBRATE heater=heater_bed TARGET=110
 ```
 
+- Calibrate the probe Z offset. Home, then without moving the toolhead run:
+```shell
+PROBE_CALIBRATE
+```
+  Follow the paper test with `TESTZ`, then `ACCEPT` and `SAVE_CONFIG`. Homing leaves the toolhead at bed center, which is also where the mesh takes its zero reference, so do not move before calibrating.
+
 ## Slicer Setup
 
 Start G-code (PrusaSlicer, OrcaSlicer):
