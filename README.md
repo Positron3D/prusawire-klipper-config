@@ -85,6 +85,12 @@ The two BTT SB2209 configs are derived from BTT's documentation and schematics a
 - E3D PZ Probe signal to pin 5 of the PROBE header (gpio21), the buffered 5V tolerant input. The PZ Probe idles at its 5V supply, which the unbuffered pin 3 does not tolerate.
 - The Omron goes on the IND port and a filament sensor on the ENDSTOP port, as before.
 
+### BTT SB2209 CAN
+
+- CAN needs a bridge on the host side, either a mainboard flashed in USB-to-CAN bridge mode or a U2C, and a `can0` interface. Follow https://www.klipper3d.org/CANBUS.html, then find the board's UUID with `~/klippy-env/bin/python ~/klipper/scripts/canbus_query.py can0` and put it in the `[mcu sb2209can]` section.
+- Part cooling fan to FAN1, hotend fan to FAN2, the same ports as on the USB board. BTT's CAN sample config has these two swapped; this config keeps one rule for both boards.
+- SuperPINDA on the Proximity port. A filament sensor on the three-pin Endstop header.
+
 ### LDO Nitehawk-SB
 
 If the board drops off USB after every FIRMWARE_RESTART and needs a power cycle, it has the V1.5 USB adapter board. Remove R6 and R7 as described in the [Prusawire FAQ](https://prusawire.positron3d.com/faq).
