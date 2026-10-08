@@ -94,6 +94,9 @@ enable_force_move: True
 ##### Omron Probe on BTT SB2209 USB
 #[include prusawire/probes/omron__btt_sb2209_usb.cfg]
 
+##### SuperPINDA wired to the Einsy RAMBo's stock PINDA connector
+#[include prusawire/probes/super_pinda__einsy_rambo.cfg]
+
 #########################
 #### EXTRUDERS
 
