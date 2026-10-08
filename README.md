@@ -7,6 +7,8 @@
 This guide assumes you are running an out-of-the-box installation of [MainsailOS](https://docs-os.mainsail.xyz/) on a Raspberry Pi.
 We do not recommend using KIAUH, as this tends to be over-zealous with how it configures your machine.
 
+This config requires Klipper from 2025-04-06 or later. The homing macros use the `SET_HOMED` parameter of `SET_KINEMATIC_POSITION`, which older builds silently ignore. Check the Klipper version on Mainsail's Machine page and update Klipper from there if it is older.
+
 For installing MainsailOS (and with that, Klipper) for the first time, please refer to their [installation guide](https://docs-os.mainsail.xyz/getting-started/raspberry-pi-os-based).
 
 ### Upgrading the Einsy Rambo to Klipper - Read this!
@@ -36,6 +38,8 @@ managed_services: klipper
 
 - Refer to the `printer.cfg.example` file on setting up your printer.cfg for the first time
 
+- `PRINT_START` draws a [Squiggly Purge](https://github.com/mjonuschat/voron-mods/tree/main/Squiggly%20Purge) line by @mjonuschat before every print. It is included by the standard macros; the purge length is the `PURGE_LENGTH` parameter in `macros/print_start_end.cfg`.
+
 - Set the rotation_distance within the printer.cfg based on the pulley size
 
 - Run PID calibration on your hotend:
@@ -47,6 +51,12 @@ PID_CALIBRATE heater=extruder TARGET=250
 ```shell
 PID_CALIBRATE heater=heater_bed TARGET=110
 ```
+
+## Toolboard Wiring Notes
+
+### LDO Nitehawk-SB
+
+If the board drops off USB after every FIRMWARE_RESTART and needs a power cycle, it has the V1.5 USB adapter board. Remove R6 and R7 as described in the [Prusawire FAQ](https://prusawire.positron3d.com/faq).
 
 ## Sensorless Homing
 
@@ -74,11 +84,6 @@ This requires an external accelerometer (eg LDO Input Shaper) to be mounted to y
 If you encounter a Klipper error for mcu 'rpi': Unable to connect, follow the [Flashing RPI guide](https://www.klipper3d.org/RPi_microcontroller.html)
 
 ## Additional Useful Add-ins
-
-### Squiggly Purge
-[Squiggly Purge](https://github.com/mjonuschat/voron-mods/tree/main/Squiggly%20Purge) by @mjonuschat
-
-For making fun shaped purges
 
 ### TMC Auto Tune
 [TMC Autotune](https://github.com/andrewmcgr/klipper_tmc_autotune) by @andrewmcgr
