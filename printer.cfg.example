@@ -128,6 +128,9 @@ nozzle_diameter: 0.4
 ##### BTT SB2209 USB
 #[include prusawire/filament_sensors/btt_sb2209_usb.cfg]
 
+##### BTT SB2209 CAN
+#[include prusawire/filament_sensors/btt_sb2209_can.cfg]
+
 #########################
 #### LCD SCREENS
 
