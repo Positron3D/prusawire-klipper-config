@@ -54,6 +54,12 @@ PID_CALIBRATE heater=heater_bed TARGET=110
 
 ## Toolboard Wiring Notes
 
+### BTT SB2209 USB
+
+- SuperPINDA signal to pin 3 of the PROBE header (gpio22). Its open-collector output only pulls the line low, so the direct MCU pin is safe.
+- E3D PZ Probe signal to pin 5 of the PROBE header (gpio21), the buffered 5V tolerant input. The PZ Probe idles at its 5V supply, which the unbuffered pin 3 does not tolerate.
+- The Omron goes on the IND port and a filament sensor on the ENDSTOP port, as before.
+
 ### LDO Nitehawk-SB
 
 If the board drops off USB after every FIRMWARE_RESTART and needs a power cycle, it has the V1.5 USB adapter board. Remove R6 and R7 as described in the [Prusawire FAQ](https://prusawire.positron3d.com/faq).
