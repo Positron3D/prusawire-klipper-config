@@ -55,6 +55,8 @@ If you are running the Einsy board, congrats, you are now done.
 For the BTT SKR Mini E3, some further tuning likely needs to happen. Refer to [this guide](https://gist.github.com/clee/9108f7717defce8b1222698f816def0a#finding-the-right-stallguard-threshold) by clee
 on setting the correct stallguard threshold.
 
+Run current and StallGuard threshold are tuned as a pair. If you change `run_current` for your motors (see the MOTORS section of `printer.cfg.example`), re-run the threshold tuning.
+
 ## Klipper Screen
 
 For users that are using a TFT or HDMI screen, you will need to install Klipper Screeen [Link](https://klipperscreen.readthedocs.io/en/latest/) 
