@@ -1,3 +1,5 @@
+# Requires Klipper from 2025-04-06 or later (SET_KINEMATIC_POSITION SET_HOMED).
+
 [gcode_arcs]
 [exclude_object]
 
@@ -134,7 +136,7 @@ nozzle_diameter: 0.4
 ##### Prusa MK3 LCD
 #[include prusawire/screens/prusa_mk3_einsy_rambo.cfg]
 
-# For BTT Pi TFT and HDMI 5, please check back soon
+# BTT Pi TFT and HDMI screens use KlipperScreen. See the README.
 
 #########################
 #### STANDARD MACROS
@@ -171,7 +173,7 @@ damping_ratio_y: 0.053
 
 # If you are using stock MK3/MK4 timing pulleys (16 teeth) for 
 # your belts, uncomment the following to change rotation_distance to 32.
-# This must be kept after the mainboards section, which set a rotation_idstance of 40 (20 teeth).
+# This must be kept after the mainboards section, which set a rotation_distance of 40 (20 teeth).
 
 #[stepper_x]
 #rotation_distance: 32
