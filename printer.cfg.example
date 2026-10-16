@@ -50,6 +50,18 @@ enable_force_move: True
 #[mcu nitehawk]
 #serial: /dev/serial/by-id/usb-Klipper_xxxxxx_xxxxxxx
 
+##### LDO Nitehawk SB V2 chamber thermistor (optional)
+# Only if a thermistor is plugged into the V2's chamber thermistor port; set sensor_type
+# to match it. With the port empty this sensor reads an open circuit and Klipper stops
+# with "ADC out of range".
+#[temperature_sensor chamber_temp]
+#sensor_type: Generic 3950
+#sensor_pin: nitehawk:PB2
+#pullup_resistor: 4700
+#min_temp: 0
+#max_temp: 100
+#gcode_id: chamber_th
+
 ##### BTT SB2209 USB
 #[include prusawire/toolboards/btt_sb2209_usb.cfg]
 #
