@@ -56,12 +56,11 @@ enable_force_move: True
 #[mcu sb2209]
 #serial: /dev/serial/by-id/usb-Klipper_rp2040_xxxxxxx
 
-##### BTT SBB2209 CAN
+##### BTT SB2209 CAN
 #[include prusawire/toolboards/btt_sb2209_can.cfg]
 #
 #[mcu sb2209can]
-#serial: /dev/serial/by-id/usb-Klipper_Klipper_firmware_xxxx
-#canbus_uuid: 0e0d81e4210c
+#canbus_uuid: xxxxxxxxxxxx    # from: ~/klippy-env/bin/python ~/klipper/scripts/canbus_query.py can0
 
 #########################
 #### PROBES
