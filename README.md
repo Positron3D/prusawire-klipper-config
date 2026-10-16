@@ -9,6 +9,8 @@ We do not recommend using KIAUH, as this tends to be over-zealous with how it co
 
 This config requires Klipper from 2025-04-06 or later. The homing macros use the `SET_HOMED` parameter of `SET_KINEMATIC_POSITION`, which older builds silently ignore. Check the Klipper version on Mainsail's Machine page and update Klipper from there if it is older.
 
+This config requires a toolhead board: LDO Nitehawk-SB V1 or V2, or BTT SB2209 USB or CAN. The extruder, hotend, fans and probe are all wired to it. A stock-wired MK3 with the extruder on the mainboard is not supported.
+
 For installing MainsailOS (and with that, Klipper) for the first time, please refer to their [installation guide](https://docs-os.mainsail.xyz/getting-started/raspberry-pi-os-based).
 
 ### Upgrading the Einsy Rambo to Klipper - Read this!
@@ -52,6 +54,26 @@ PID_CALIBRATE heater=extruder TARGET=250
 PID_CALIBRATE heater=heater_bed TARGET=110
 ```
 
+- Calibrate the probe Z offset. Home, then without moving the toolhead run:
+```shell
+PROBE_CALIBRATE
+```
+  Follow the paper test with `TESTZ`, then `ACCEPT` and `SAVE_CONFIG`. Homing leaves the toolhead at bed center, which is also where the mesh takes its zero reference, so do not move before calibrating.
+
+## Slicer Setup
+
+Start G-code (PrusaSlicer, OrcaSlicer):
+```
+PRINT_START BED=[first_layer_bed_temperature] EXTRUDER=[first_layer_temperature]
+```
+
+End G-code:
+```
+PRINT_END
+```
+
+Enable object labels so adaptive meshing and purging know where the print is. PrusaSlicer: Print Settings > Output options > Label objects: Firmware-specific. OrcaSlicer: Others > Exclude objects.
+
 ## Toolboard Wiring Notes
 
 The two BTT SB2209 configs are derived from BTT's documentation and schematics and have not yet been run on a printer. If you build one, please report how it went on the Positron 3D Discord.
@@ -62,6 +84,12 @@ The two BTT SB2209 configs are derived from BTT's documentation and schematics a
 - SuperPINDA signal to pin 3 of the PROBE header (gpio22). Its open-collector output only pulls the line low, so the direct MCU pin is safe.
 - E3D PZ Probe signal to pin 5 of the PROBE header (gpio21), the buffered 5V tolerant input. The PZ Probe idles at its 5V supply, which the unbuffered pin 3 does not tolerate.
 - The Omron goes on the IND port and a filament sensor on the ENDSTOP port, as before.
+
+### BTT SB2209 CAN
+
+- CAN needs a bridge on the host side, either a mainboard flashed in USB-to-CAN bridge mode or a U2C, and a `can0` interface. Follow https://www.klipper3d.org/CANBUS.html, then find the board's UUID with `~/klippy-env/bin/python ~/klipper/scripts/canbus_query.py can0` and put it in the `[mcu sb2209can]` section.
+- Part cooling fan to FAN1, hotend fan to FAN2, the same ports as on the USB board. BTT's CAN sample config has these two swapped; this config keeps one rule for both boards.
+- SuperPINDA on the Proximity port. A filament sensor on the three-pin Endstop header.
 
 ### LDO Nitehawk-SB
 
