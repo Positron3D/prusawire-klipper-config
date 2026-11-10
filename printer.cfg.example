@@ -164,6 +164,9 @@ nozzle_diameter: 0.4
 #### MOVEMENT
 [include prusawire/macros/movement.cfg]
 
+#### NOZZLE WIPER
+#[include prusawire/macros/nozzle_brush.cfg]
+
 #########################
 
 [printer]
